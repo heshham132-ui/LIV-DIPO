@@ -1,0 +1,772 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ################### start nav ##################### */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
+    min-height: 70px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: rgb(227, 230, 243);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul li {
+    list-style: none;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(9, 10, 15);
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.nava ul li  a i{
+    background: #74C0FC;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    color: hsl(180, 95%, 38%);
+}
+
+nav ul li a:active::after,
+nav ul li a:hover::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: rgb(210, 108, 134);
+    position: absolute;
+    bottom: -5px;
+    left: -2px;
+    border-radius: 50%;
+}
+.cart-icon {
+  color: #74C0FC;
+  font-size: 20px;
+}
+
+.cart-icon:hover {
+color: #54b3fc;}
+
+.mobil {
+    font-size: 22px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
+
+@media (min-width: 601px) {
+    .mobil {
+        display: none;
+    }
+}
+/* #################### end nav ##################### */
+
+
+/* ##################### start hero section ############################ */
+.hero {
+    background-image: url(img/hero4.png);
+    background-size: cover;
+    background-position: right 0% top 25%;
+    height: 90vh;
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero h4 {
+    margin-bottom: 15px;
+    color: hsl(179, 34%, 48%);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hero h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    color: hsl(176, 88%, 27%);
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 18px;
+    color: rgb(127, 124, 115);
+    font-weight: 500;
+}
+
+.hero button {
+    background-image: url(img/button.png);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    color: hsl(210, 16%, 56%);
+    padding: 14px 80px 14px 65px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        background-position: right 30% top 30%;
+        padding: 0 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .hero {
+        background-position: right 30% top 30%;
+        padding: 0 80px;
+    }
+}
+
+
+/* ############ start features ########## */
+.features {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+    padding: 0 80px;
+}
+
+.features .pox {
+    border: 1px solid rgb(227, 230, 243);
+    padding: 25px 15px;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.features .pox h6 {
+    background-color: hsl(347, 89%, 93%);
+    padding: 9px 8px 5px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: hsl(177, 28%, 49%);
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.features .pox .t2 {
+    background-color: rgb(205, 235, 188);
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: rgb(19, 141, 141);
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 80px;
+    }
+}
+
+
+/* ############## start container-1 ################# */
+.contaier-1 {
+    text-align: center;
+    margin: 40px 0;
+    padding: 0 80px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 20px;
+    padding-top: 20px;
+}
+
+.card {
+    border: 1px solid rgb(227, 230, 243);
+    padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.products .card img:hover {
+    transform: scale(1.03);
+}
+
+.card .card-info {
+    text-align: start;
+    padding: 10px 0;
+}
+
+.card .card-info p {
+    padding: 10px 0;
+    font-size: 12px;
+    color: rgb(192, 187, 170);
+}
+
+.card .card-info h5 {
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card .card-info h4 {
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card .card-info .fa-star {
+    color: yellowgreen;
+    margin-top: 5px;
+}
+
+.card button {
+    width: 100%;
+    padding: 12px 0;
+    color: rgb(47, 46, 44);
+    background-color: rgb(236, 231, 224);
+    border: 1px solid rgb(227, 230, 243);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    color: #e1e1e1;
+    background: #0d9a5c;
+    border-color: #0f8753;
+}
+
+@media (max-width: 600px) {
+    .contaier-1 {
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 10px;
+        padding-top: 8px;
+    }
+
+    .card {
+        border: none;
+        padding: 8px 10px;
+        border-radius: 6px;
+    }
+
+    .card img {
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .contaier-1 {
+        margin: 40px 0;
+        padding: 0 80px;
+    }
+
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px 10px;
+        padding-top: 8px;
+    }
+
+    .card {
+        border: none;
+        padding: 8px 10px;
+        border-radius: 6px;
+    }
+
+    .card img {
+        border-radius: 10px;
+    }
+}
+
+
+/* $$$$$$$$$$$$$$$$$$$$ start banner $$$$$$$$$$$$$$$$$$$$$$$$$ */
+.banner {
+    background-image: url(img/b2.jpg);
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.banner h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.banner h2 {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.banner h2 span {
+    color: red;
+}
+
+.banner button {
+    font-size: 16px;
+    font-weight: 700;
+    background-color: rgb(236, 231, 224);
+    padding: 15px 30px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.banner button:hover {
+    background-color: grey;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .banner {
+        text-align: center;
+    }
+
+    .banner h4 {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+    .banner h2 {
+        font-size: 25px;
+        font-weight: 300;
+        padding: 10px 0;
+    }
+}
+
+
+/* ****************** start md-mg ############ */
+.md-mg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 0 80px;
+    margin-top: 40px;
+}
+
+.mg-1,
+.mg-2 {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.mg-1 {
+    background-image: url(img/b17.jpg);
+}
+
+.mg-2 {
+    background-image: url(img/b10.jpg);
+}
+
+.md-mg h4 {
+    color: rgb(255, 250, 249);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.md-mg h2 {
+    color: rgb(255, 250, 249);
+    font-size: 30px;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.md-mg span {
+    color: rgb(255, 250, 249);
+    font-size: 15px;
+    font-weight: 300;
+    padding-bottom: 15px;
+}
+
+.md-mg button {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 13px 18px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid wheat;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.md-mg .mg-1:hover button,
+.md-mg .mg-2:hover button {
+    background-color: grey;
+    border-color: grey;
+}
+
+@media (max-width: 800px) {
+    .md-mg {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 20px;
+    }
+}
+
+
+/* ############ start banner-3 ############### */
+.banner-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 80px;
+    margin: 40px 0;
+}
+
+.banner-3-box1,
+.banner-3-box2,
+.banner-3-box3 {
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.banner-3-box1 {
+    background-image: url(img/b7.jpg);
+}
+
+.banner-3-box2 {
+    background-image: url(img/b4.jpg);
+}
+
+.banner-3-box3 {
+    background-image: url(img/b18.jpg);
+}
+
+.banner-3 h2 {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.banner-3 h3 {
+    color: red;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    .banner-3 {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
+
+
+/* ############ start section form ############ */
+.form {
+    background-image: url(img/b14.png);
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+    min-height: 15vh;
+    padding: 20px 80px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 40vh;
+}
+
+.tx h4 {
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+}
+
+.tx p {
+    font-size: 15px;
+    font-weight: 600;
+    color: gray;
+}
+
+.tx p span {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(195, 195, 41);
+}
+
+.in {
+    display: flex;
+}
+
+.in input {
+    height: 50px;
+    padding: 0 20px;
+    font-size: 20px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.in button {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #088178;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    white-space: nowrap;
+}
+
+/* start media */
+@media (max-width: 600px) {
+    .form {
+        min-height: 20vh;
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .form {
+        min-height: 20vh;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 80px;
+    }
+}
+
+/* ==========================================
+              (Footer)
+   ========================================== */
+footer {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+    gap: 30px 40px;
+    padding: 50px 80px 20px 80px;
+    background-color: #ffffff;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .logo {
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+footer h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: #222;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    color: #465b52;
+}
+
+footer a {
+    display: block;
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+
+footer a:hover {
+    color: #088178;
+}
+
+footer p a {
+    display: inline;
+    margin-bottom: 0;
+}
+
+/* أيقونات التواصل */
+footer .follow .icon {
+    display: flex;
+    gap: 12px;
+}
+
+footer .follow .icon a {
+    display: inline-block;
+    margin-bottom: 0;
+    color: #465b52;
+}
+
+footer .follow .icon a:hover {
+    color: #088178;
+}
+
+/* أزرار التطبيقات وبوابات الدفع */
+footer .install .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px 0 15px 0;
+    width: 100%;
+}
+
+.app-btn {
+    padding: 8px 12px;
+    border: 1px solid #088178;
+    border-radius: 6px;
+    background: #fff;
+    color: #088178;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: left;
+    transition: 0.2s;
+}
+
+.app-btn:hover {
+    background: #088178;
+    color: #fff;
+}
+
+.payments {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, max-content));
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.pay-card {
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
+}
+
+.pay-card.visa       { color: #1a1f71; }
+.pay-card.mastercard { color: #eb001b; }
+.pay-card.maestro    { color: #0099df; }
+.pay-card.amex       { color: #2e77bc; }
+
+/* حقوق النشر: تاخد عرض الصف كله */
+footer .copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #e1e1e1;
+}
+
+footer .copyright p {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+}
+
+/* تابلت */
+@media (max-width: 800px) {
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 40px 20px 40px;
+    }
+}
+
+/* موبايل */
+@media (max-width: 600px) {
+    footer {
+        grid-template-columns: 1fr;
+        padding: 40px 20px 20px 20px;
+    }
+}
